@@ -36,7 +36,7 @@ for url in urls:
 	for password in passwords:
 		q.put((url,password))
 
-for i in range(3):
+for i in range(30):
 	t=threading.Thread(target=make_request,args=(q,)) 
 	t.start()
 threads.append(t)
